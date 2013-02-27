@@ -1,0 +1,41 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/style.css') 
+  body
+    div.container
+        div.masthead
+            ul.nav.nav-pills.pull-right
+                if(currentURL == '/')
+                    li.active 
+                        a(href='/') Home
+                else
+                    li 
+                        a(href='/') Home
+
+                if(currentURL == '/srpintrest')
+                    li.active
+                        a(href='/srpintrest') SRPintrest
+                else
+                    li
+                        a(href='/srpintrest') SRPintrest
+
+                if(currentURL == '/vdpintrest')
+                    li.active
+                        a(href='/vdpintrest') VDPintrest
+                else
+                    li
+                        a(href='/vdpintrest') VDPintrest
+            
+            h3.muted n + 1 // srpintrest
+        hr
+        block content
+
+    footer.footer
+        div.container
+            p lovingly imagined, coded and deployed by Greg
+
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    script(src='/javascripts/bootstrap.js')

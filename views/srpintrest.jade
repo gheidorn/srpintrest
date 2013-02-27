@@ -1,0 +1,43 @@
+extends layout
+
+block content
+
+    div.container-fluid
+        div.span2 
+            p.results #{sr.SearchResultBO.resultCount} results
+        div.span12.pull-right
+            - each b in sr.SearchResultBO.breadCrumbs
+                button.btn.btn-warning(data-breadcrumb-id='#{b.values[0].value}')
+                    | #{b.values[0].name}&nbsp;&nbsp;<i class='icon-remove-sign icon-white'></i>
+
+    hr
+
+    div.container-fluid
+
+        //p Welcome to #{title}
+
+        div#columns
+            - each l in sr.SearchResultBO.listings
+                div.pin
+                    div.pin-holder
+                        if(l.actualPhotoImageLocation)
+                            a(href='#vdp', data-toggle="modal")
+                                img(src='http://www.cstatic-images.com/phototab/' + l.actualPhotoImageLocation.substr(0, l.actualPhotoImageLocation.indexOf(',')), height='100%', width='100%')
+                        else
+                            a(href='#', data-toggle="modal")
+                                img(src='http://www.cars.com/search/images/ghostVehicle.jpg', width='186')
+                    if(l.price)
+                        p.description
+                            span.pull-left.miles #{parseFloat(l.distanceFromBuyerZip).toFixed(1)} mi.
+                            span.pull-right.price $#{l.price.toLocaleString()}
+
+    div#vdp.modal.hide.fade(tabindex='1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+        div.modal-header
+            button.close(type='button', data-dismiss='modal', aria-hidden='true')
+                | x
+            h3#myModalLabel Modal header
+        div.modal-body
+            p one fine body...
+        div.modal-footer
+            button.btn(data-dismiss='modal', aria-hidden='true') close
+            button.btn.btn-primary save

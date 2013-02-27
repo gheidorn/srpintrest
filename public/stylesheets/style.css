@@ -1,0 +1,123 @@
+/*
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+*/
+
+/* Custom container */
+.container-narrow {
+margin: 0 auto;
+max-width: 700px;
+}
+.container-narrow > hr {
+margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+/*margin: 60px 0;*/
+text-align: center;
+}
+.jumbotron h1 {
+font-size: 72px;
+line-height: 1;
+}
+.jumbotron .btn {
+font-size: 21px;
+padding: 14px 24px;
+}
+
+/* ripped from bootstrap home page */
+.footer {
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 70px;
+  border-top: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
+}
+.footer p {
+  margin-bottom: 0;
+  color: #777;
+}
+.footer-links {
+  margin: 10px 0;
+}
+.footer-links li {
+  display: inline;
+  padding: 0 2px;
+}
+.footer-links li:first-child {
+  padding-left: 0;
+}
+
+/* shaped to look like <pre> */
+code { 
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  line-height: 20px;
+  white-space: pre-wrap;
+  overflow: scroll;
+}
+
+.container { width: 1200px;}
+.container-fluid { }
+.narrow-container { min-height: 700px; position: relative;}
+.screenshot { padding: 15px 100px;}
+#columns {
+    -moz-column-count: 5;
+    -moz-column-gap: 15px;
+    -moz-column-fill: auto;
+    -webkit-column-count: 5;
+    -webkit-column-gap: 15px;
+    -webkit-column-fill: auto;
+    column-count: 5;
+    column-gap: 15px;
+    column-fill: auto;
+    -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+.pin { 
+  -moz-column-break-inside: avoid; 
+  -webkit-column-break-inside: avoid; 
+  column-break-inside: avoid; 
+  display: inline-block; 
+  margin: 0 2px 15px; 
+  padding: 15px 15px 0px; 
+  border: 2px solid #FAFAFA; 
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4); 
+  background: #FEFEFE; 
+  background-image: linear-gradient(45deg, #FFF, #F9F9F9);
+ }
+.pin-holder {  }
+.description {
+  color: #ad9c9c;
+  background-color: #fff;
+  text-align: center;
+  font-family: sans-serif;
+  line-height: 2.5em;
+  margin: 10px 0 5px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.price {  font-size: 24pt;
+  font-weight: bold;}
+
+.miles {   font-size: 10pt;
+  font-weight: bold;}
+
+h3 {margin-bottom: 0px;}
+hr {margin:10px 0px;}
+.results { line-height: 1.5em;font-size: 14pt; margin-bottom: 0px;}
+.btn-warning { margin-right: 3px;}
